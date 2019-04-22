@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
+
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", "arial", "sans-serif";
+  font-size: 7.5px;
+  width: 100%;
+  height: 100%;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+header,
+footer,
+section,
+main,
+article {
+  font-family: "Roboto", "arial", "sans-serif";
+  font-size: 10px;
+  margin: 0;
+  padding: 0;
+  color: #293347;
+  font-weight: 200;
+  line-height: 1.2;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+fieldset,
+img {
+  border: 0;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+ol,
+ul {
+  list-style: none;
+}
+caption,
+th {
+  text-align: left;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+q:before,
+q:after {
+  content: "";
+}
+abbr,
+acronym {
+  border: 0;
+  font-variant: normal;
+}
+sup {
+  vertical-align: text-top;
+}
+sub {
+  vertical-align: text-bottom;
+}
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+input,
+textarea,
+select {
+  font-size: 100%;
+}
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="button"],
+intput[type="submit"],
+input[type="reset"],
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+legend {
+  color:#293347;
+}
+legend,
+caption {
+  text-indent: -15000px;
+  height: 0;
+  width: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+label,
+button {
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+a {
+  color: #293347;
+  text-decoration: none;
+}
+i {
+  font-style: normal;
+}
+
+#wrap{
+  width: 100%;
+}
+
+header {
+  background : #ff2d60;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+header > h1 {
+  height: 48px;
+}
+
+header > h1 > a > img {
+  height: 100%;
+}
+
+main {
+  width: 100%;
+}
+
+main section.popular-hostel-list ol,
+main section.cast-list ol {
+  width: 100%;
+  display: flex;
+}
+
+main section.popular-hostel-list ol li {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  transition: all .2s ease-in;
+}
+
+main section.popular-hostel-list ol li .hostel-info {
+  display: flex;
+  height: 210px;
+  width: 100%;
+  position: absolute;
+  background:rgba(255,255,255,0.5);
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+main section.popular-hostel-list ol li .hostel-info h3 {
+  font-size: 18px; 
+  color:#000000;
+  font-weight: 700;
+  margin-bottom:5px;
+}
+
+main section.popular-hostel-list ol li .hostel-info p.price {
+  font-size: 18px; 
+  color:#ff2d60;
+  font-weight: 700;
+  margin-bottom:15px;
+}
+
+main section.popular-hostel-list ol li .hostel-info p {
+  font-size: 12px;
+  color:#000000;
+}
+
+@media only screen and (min-width : 801px) {  
+  #wrap{
+    width: 100%;
+    min-width: 801px;
+  }
+  main > section.popular-hostel-list ol {
+    height: 400px;
+  }
+  main > section.popular-hostel-list ol li {
+    align-items: center;
+    width: 33.33%;
+  }
+  main > section.popular-hostel-list ol li:hover {
+    width: 66.66%;
+  }
+
+  main section.cast-list ol {
+  }
+
+  main section.cast-list ol li {
+    width: 25%;
+    display: flex;
+    flex-flow: column wrap;
+    overflow: hidden;
+  }
+}
+
+@media only screen and (max-width : 800px) {  
+  header {
+    justify-content: center;
+  }
+  main > section.popular-hostel-list ol {
+    width: 100%;
+    flex-direction: column;
+  }
+  main > section.popular-hostel-list ol li {
+    width: 100%;
+    height: 500px;
+  }
+}
